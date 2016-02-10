@@ -26,23 +26,13 @@ movies << {
   stars: ["Leonardo DiCaprio", "JGL"]
 }
 
-# # Create an array of movies with budgets less than 100
-
-# low_budget_ary = movies.select {|movies| movies[:budget] < 100}
-# low_budget_ary = low_budget_ary.map {|movies| movies[:title]}
-# puts "array of movies with budgets less than 100: \n#{low_budget_ary.inspect}"
-
+# Create an array of movies with budgets less than 100
 low_budget_ary = movies
   .select {|movies| movies[:budget] < 100}
   .map {|movies| movies[:title]}
 puts "Array of movies with budgets less than 100: \n#{low_budget_ary.inspect}"
 
 # Create an array of movies that have Leonardo DiCaprio as a star
-
-# leo_ary = movies.select {|movies| movies[:stars].include? "Leonardo DiCaprio"}
-# leo_ary = leo_ary.map {|movies| movies[:title]}
-# puts "Array of movies that have Leonardo DiCaprio as a star: \n#{leo_ary.inspect}"
-
 leo_ary = movies
   .select {|movies| movies[:stars].include? "Leonardo DiCaprio"}
   .map {|movies| movies[:title]}
