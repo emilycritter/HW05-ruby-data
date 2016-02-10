@@ -7,4 +7,4 @@ words = sentence_ary.select do |word|
   word.length > 5
 end
 
-puts "There are #{words.length} with 5 letters."
+puts "There are #{words.length} words with 5 letters."
